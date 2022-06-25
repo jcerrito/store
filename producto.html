@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jonathan Cerrito">
+    <!-- Normalize -->
+    <link rel="preload" href="assets/css/normalize.css" as="style">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Store</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="assets/img/logo.png" alt="logo">
+        </a>
+    </header>
+
+    <nav class="navbar">
+        <a class="navbar__link" href="index.html">Tienda</a>
+        <a class="navbar__link" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="container m-1">
+        <h1>ReactJS</h1>
+        <div class="shirt">
+            <img class="img__shirt" src="assets/img/3.jpg" alt="camisa">
+            <div class="contain__shirt">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur repudiandae voluptatum sit at recusandae similique corrupti nulla soluta aperiam deleniti illo impedit, est, accusantium debitis veniam repellat accusamus, consectetur voluptate.</p>
+                <form class="form">
+                    <select class="input__form" name="talla" id="talla">
+                        <option value="-- Seleccionar talla --" disabled selected>-- Seleccionar talla --</option>
+                        <option value="Chica">Chica</option>
+                        <option value="Mediana">Mediana</option>
+                        <option value="Grande">Grande</option>
+                        <option value="ExtraGrande">Extra Grande</option>
+                    </select>
+                    <input class="input__form" type="number" name="cantidad" id="cantidad" min="1" max="10" placeholder="Cantidad">
+                    <input class="submit__form" type="submit" value="Agregar al Carrito">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text m-1">Front End Store - Todos los Derechos Reservados</p>
+    </footer>
+</body>
+</html>

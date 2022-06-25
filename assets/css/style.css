@@ -1,0 +1,248 @@
+:root {
+    --primary: #541388;
+    --darkPrimary: #2E294E;
+    --secundary: #DEE000;
+    --darkSecundary: #FFD400;
+    --white: #ffffff;
+    --black: #000000;
+    --font: 'Staatliches', cursive;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/*****************************************************************************************
+*    GLOBALES                                                                            *
+*****************************************************************************************/
+body {
+    background-color: var(--primary);
+    font-size: 1.6rem;
+    line-height: 1,5;
+}
+p {
+    font-size: 1,8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+}
+a{
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 76.8rem) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+h1, h2, h3 {
+    text-align: center;
+    color: var(--darkSecundary);
+    font-family: var(--font);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+.m-1 {
+    margin: 1rem;
+}
+/******************************************************************************************
+*    HEADER                                                                               *
+******************************************************************************************/
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: 3rem 0;
+}
+/******************************************************************************************
+*    NAVBAR                                                                               *
+******************************************************************************************/
+.navbar {
+    background-color: var(--darkPrimary);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.navbar__link {
+    font-family: var(--font);
+    color: var(--white);
+    font-size: 3rem;
+}
+.navbar__link--active,
+.navbar__link:hover {
+    color: var(--darkSecundary);
+}
+
+/******************************************************************************************
+*    FOOTER                                                                               *
+******************************************************************************************/
+.footer {
+    background-color: var(--darkPrimary);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__text {
+    font-family: var(--font);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+/******************************************************************************************
+*    PRODUCT                                                                              *
+******************************************************************************************/
+.product {
+    background-color: var(--darkPrimary);
+    padding: 1rem;
+}
+.product__name{
+    font-size: 3rem;
+}
+@media (min-width: 76.8rem) {
+    .product__name {
+        font-size: 4rem;
+    }
+}
+.product__price{
+    font-size: 2.8rem;
+    color: var(--darkSecundary);
+}
+.product__name,
+.product__price {
+    font-family: var(--font);
+    margin: 1rem, 0;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+/******************************************************************************************
+*    GRAPHICS                                                                             *
+******************************************************************************************/
+.graphic {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+.graphic--shirts {
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+.graphic--node {
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+}
+@media (min-width: 76.8rem) {
+    .graphic--node {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/******************************************************************************************
+*    ABOUT                                                                                *
+******************************************************************************************/
+.about {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+@media (min-width: 76.8rem) {
+    .about {
+        grid-template-columns: repeat(2, auto);
+        column-gap: 2rem;
+    }
+}
+.about__img {
+    grid-row: 1 / 2;
+}
+@media (min-width: 76.8rem) {
+    .about__img {
+        grid-column: 2 / 3;
+    }
+}
+
+/*******************************************************************************************
+*    BLOCKS                                                                                *
+*******************************************************************************************/
+.blocks {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+    margin: 1rem;
+}
+@media (min-width: 76.8rem) {
+    .blocks {
+        grid-template-columns: repeat(4, auto);
+    }
+}
+.block {
+    text-align: center;
+}
+.block__title {
+    margin: 0;
+}
+
+/*******************************************************************************************
+*    SHIRT                                                                                 *
+********************************************************************************************/
+@media (min-width: 76.8REM) {
+    .shirt {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+}
+.input__form {
+    border: 1rem solid var(--darkPrimary);
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem;
+    appearance: none;
+}
+@media (min-width: 76.8rem) {
+    .input__form {
+        font-size: 1.8rem;
+        padding: 1rem;
+        width: auto;
+    }
+}
+.submit__form {
+    background-color: var(--darkSecundary);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--font);
+    padding: 2rem;
+    grid-column: 1 / 3;
+}
+.submit__form:hover {
+    cursor: pointer;
+    background-color: var(--secundary);
+}
