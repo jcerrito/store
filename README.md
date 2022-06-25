@@ -6,3 +6,5 @@ Plantilla sencilla para tienda en línea, cuenta con un index el cual muestra lo
 ***
 * HTML 5
 * CSS 3
+### Vea aquí
+[store](https://jcerrito.github.io/store/)
