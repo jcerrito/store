@@ -213,6 +213,9 @@ h3 {
         column-gap: 2rem;
     }
 }
+.img__shirt {
+    height: 100%;
+}
 .form {
     display: grid;
     grid-template-columns: repeat(2, auto);
